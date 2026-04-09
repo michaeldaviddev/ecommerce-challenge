@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+/* ===== VARIABLES ===== */
+:root {
+  --gray-light: #E4E8F0;
+  --green-primary: #17a15b;
+  --green-light: #edf8f2;
+  --gray-dark: #354159;
+  --gray-medium: #7E8BA7;
+  --white: #ffffff;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-3xl: 24px;
+  --blue: #1a8ff1;
+}
+
+/* ===== RESET ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--font-main);
+  color: var(--gray-900);
+  background: #f8f8f8;
+  line-height: 1.5;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+ul {
+  list-style: none;
+}
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}

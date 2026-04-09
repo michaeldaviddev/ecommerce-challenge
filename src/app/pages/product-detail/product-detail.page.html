@@ -1,1 +1,101 @@
-<p>product-detail works!</p>
+<!-- PRODUCT SECTION -->
+<section class="product-section">
+
+  <!-- THUMBNAILS -->
+  <div class="thumbnails">
+    <div class="thumb active">
+      <img src="https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/071265X.jpg" alt="Vista 1"/>
+    </div>
+    <div class="thumb">
+      <img src="https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/071265-2X.jpg" alt="Vista 2"/>
+    </div>
+    <div class="thumb">
+      <img src="https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/071265-3X.jpg" alt="Vista 3"/>
+    </div>
+  </div>
+
+  <!-- GALLERY -->
+  <div class="product-gallery">
+    <img
+      src="https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/071265L.jpg"
+      alt="Pharamol Antigripal"
+    />
+  </div>
+
+  <!-- INFO -->
+  <div class="product-info">
+    <div style="display:flex; justify-content:space-between; align-items:start; flex-wrap:wrap; gap:8px;">
+      <span class="product-sku">SOBRE 1 UN</span>
+      <span class="product-sku">SKU 123456</span>
+    </div>
+
+    <h1 class="product-title">Pharamol Antigripal 500 mg + 5 mg + 2 mg Tableta Recubierta</h1>
+
+    <div class="prices">
+      <div class="price-row">
+        <span class="price-label">Precio regular</span>
+        <span class="price-value crossed">S/ 25.90</span>
+      </div>
+      <div class="price-row">
+        <span class="price-label">Precio promocional</span>
+        <div class="price-with-badges">
+          <span class="price-value promo">S/ 24.60</span>
+          <span class="badge-discount badge-5">-5%</span>
+        </div>
+      </div>
+      <div class="price-row">
+        <span class="price-label">Exclusivo con tarjeta</span>
+        <div class="price-with-badges">
+          <div class="card-badges">
+            <img src="https://inkafarmaproductimages.s3.us-west-2.amazonaws.com/paymentmethods/tc_sip_cred_array.jpg" alt="">
+            <img src="https://dcuk1cxrnzjkh.cloudfront.net/paymentmethods/tc_sip_deb_array.jpg" alt="">
+          </div>
+          <span class="price-value promo">S/ 20.72</span>
+          <span class="badge-discount badge-20">-20%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="desc-preview">
+      <ul>
+        <li>¿Qué es PHARAMOL ANTIGRIPAL 500mg+5mg+2mg Tableta Recubierta y para qué se utiliza?</li>
+        <li>Es un medicamento que contiene: paracetamol que funciona para evitar que los mensajes de dolor lleguen al cerebro, también actúa en el cerebro para reducir la fiebre. La fenilefrina es un descongestionante nasal y la clorfenamina pertenece a un grupo de medicamentos llamados "antihistamínicos".</li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="presentacion-label">Presentación: <span style="color:var(--gray-500);font-weight:500;">Sobre</span></p>
+    </div>
+
+    <div class="presentacion-opts">
+      <div class="pres-opt selected" onclick="selectPres(this)">
+        <div class="pres-opt-left">
+          <img class="pres-img" src="https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/071265-2X.jpg" alt="Sobre"/>
+          <div>
+            <div class="pres-name">Sobre</div>
+            <div class="pres-from">Desde S/ 1.20</div>
+          </div>
+        </div>
+        <div class="radio-circle"><div class="radio-dot"></div></div>
+      </div>
+      <div class="pres-opt" onclick="selectPres(this)">
+        <div class="pres-opt-left">
+          <img class="pres-img" src="https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/071265-3X.jpg" alt="Caja"/>
+          <div>
+            <div class="pres-name">Caja</div>
+            <div class="pres-from">Desde S/ 24.60</div>
+          </div>
+        </div>
+        <div class="radio-circle"><div class="radio-dot"></div></div>
+      </div>
+    </div>
+
+    <div class="cta-row">
+      <button class="btn-cart">Agregar al carrito</button>
+      <button class="btn-fav" aria-label="Favoritos">
+        <i class="ri-poker-hearts-line"></i>
+      </button>
+    </div>
+  </div>
+</section>
+

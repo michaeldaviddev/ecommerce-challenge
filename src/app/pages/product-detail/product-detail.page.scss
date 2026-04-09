@@ -1,0 +1,261 @@
+.product-section {
+  max-width: 1280px;
+  margin: 0 24px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 91px auto 428px;
+  gap: 16px;
+  align-items: start;
+  border-radius: var(--radius-2xl);
+  background: var(--white);
+}
+
+/* Thumbnails */
+.thumbnails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+.thumb {
+  width: 88px;
+  height: 88px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.thumb:hover,
+.thumb.active {
+  border: 1px solid var(--blue);
+}
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Main image */
+.product-gallery {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-gallery img {
+  width: 100%;
+  max-width: 520px;
+  object-fit: contain;
+  border-radius: var(--radius-2xl);
+}
+
+/* Product info */
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.product-sku {
+  font-size: 14px;
+  color: var(--gray-medium);
+}
+.product-title {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--gray-dark);
+  line-height: 1.3;
+}
+
+.prices {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+  height: 20px;
+}
+.price-label {
+  font-size: 13px;
+  color: var(--gray-dark);
+}
+.price-value {
+  font-size: 14px;
+  color: var(--gray-dark);
+}
+.price-value.crossed {
+  text-decoration: line-through;
+  color: var(--gray-dark);
+}
+.price-value.promo {
+  color: var(--gray-dark);
+}
+.price-with-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.badge-discount {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 1px 2px;
+  border-radius: 4px;
+}
+.badge-5 {
+  background: var(--gray-dark);
+  color: var(--white);
+}
+.badge-20 {
+  background: #00b1ff;
+  color: var(--white);
+}
+.card-badges {
+  display: flex;
+  img {
+    height: 20px;
+  }
+}
+.card-type {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+.card-visa {
+  background: #1a1f71;
+  color: white;
+}
+.card-mc {
+  background: #eb001b;
+  color: white;
+}
+
+/* Description preview */
+.desc-preview {
+  font-size: 13px;
+  color: #7e8ba7;
+  line-height: 1.7;
+}
+.desc-preview ul {
+  padding-left: 14px;
+  list-style: disc;
+}
+.desc-preview ul li {
+  margin-bottom: 4px;
+}
+.desc-preview .ver-mas {
+  color: var(--green-primary);
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.82rem;
+}
+
+/* Presentacion */
+.presentacion-label {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.presentacion-opts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.pres-opt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  padding: 16px;
+  cursor: pointer;
+  gap: 16px;
+}
+.pres-opt.selected {
+  border-color: var(--blue);
+}
+.pres-opt:hover {
+  border-color: var(--blue);
+}
+.pres-opt-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.pres-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+.pres-name {
+  font-size: 14px;
+}
+.pres-from {
+  font-size: 13px;
+  color: var(--gray-medium);
+}
+.radio-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.2px solid var(--gray-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.pres-opt.selected .radio-circle {
+  border-color: var(--blue);
+}
+.radio-dot {
+  width: 10px;
+  height: 10px;
+  background: var(--blue);
+  border-radius: 50%;
+  display: none;
+}
+.pres-opt.selected .radio-dot {
+  display: block;
+}
+
+/* CTA */
+.cta-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.btn-cart {
+  flex: 1;
+  background: var(--green-primary);
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 14px 24px;
+  border-radius: var(--radius-3xl);
+  letter-spacing: 0.02em;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-fav {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-color: var(--green-light);
+}
+.btn-fav i {
+  font-size: 24px;
+  color: var(--green-primary);
+}
