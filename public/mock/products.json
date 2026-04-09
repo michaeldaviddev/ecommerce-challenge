@@ -1,18 +1,23 @@
 [
   {
     "id": 1,
-    "sku": "SKU-001",
-    "title": "Producto 1",
+    "sku": "071265",
+    "title": "Pharamol Antigripal 500 mg + 5 mg + 2 mg Tableta Recubierta",
     "description": "Descripción del producto 1",
-    "price": 19.99,
-    "image": "https://via.placeholder.com/150"
+    "price": 1.90
   },
   {
     "id": 2,
-    "sku": "SKU-002",
-    "title": "Producto 2",
+    "sku": "037437",
+    "title": "Don Grippa 500mg+5mg+2mg Tableta Recubierta",
     "description": "Descripción del producto 2",
-    "price": 29.99,
-    "image": "https://via.placeholder.com/150"
+    "price": 9.90
+  },
+  {
+    "id": 3,
+    "sku": "324071",
+    "title": "Vick Vaporub Ungüento tópico",
+    "description": "Descripción del producto 3",
+    "price": 3.00
   }
 ]
