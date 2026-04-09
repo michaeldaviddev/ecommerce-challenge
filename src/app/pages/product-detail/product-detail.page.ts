@@ -1,9 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ProductService } from '../../services/product.service';
+import { map, switchMap, tap } from 'rxjs';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-product-detail',
-  imports: [],
+  imports: [AsyncPipe],
   templateUrl: './product-detail.page.html',
   styleUrl: './product-detail.page.scss',
 })
-export class ProductDetailPage {}
+export class ProductDetailPage {
+  private route = inject(ActivatedRoute);
+  private productService = inject(ProductService);
+
+  product$ = this.route.paramMap.pipe(
+    map((params) => params.get('id')),
+    switchMap((id) => this.productService.getProductById(id!)),
+  );
+}
