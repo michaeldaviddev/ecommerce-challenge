@@ -5,10 +5,11 @@ import { map, switchMap, tap } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
 import { CartService } from '../../services/cart.service';
 import { Product } from '../../models/product';
+import { ProductCardComponent } from "../../components/product-card/product-card.component";
 
 @Component({
   selector: 'app-product-detail',
-  imports: [AsyncPipe],
+  imports: [AsyncPipe, ProductCardComponent],
   templateUrl: './product-detail.page.html',
   styleUrl: './product-detail.page.scss',
 })
@@ -20,6 +21,11 @@ export class ProductDetailPage {
   product$ = this.route.paramMap.pipe(
     map((params) => params.get('id')),
     switchMap((id) => this.productService.getProductById(id!)),
+  );
+
+  mostPopularProducts$ = this.route.paramMap.pipe(
+    map((params) => params.get('id')!),
+    switchMap((id) => this.productService.getOtherProducts(id)),
   );
 
   addToCart(product: Product) {

@@ -21,4 +21,10 @@ export class ProductService {
       map(products => products.find(p => p.id == id))
     );
   }
+
+  getOtherProducts(id: string): Observable<Product[]> {
+    return this.getProducts().pipe(
+      map(products => products.filter(p => p.id != id))
+    );
+  }
 }

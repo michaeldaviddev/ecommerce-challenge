@@ -1,0 +1,22 @@
+<article class="product-card">
+  <figure class="card-img-wrap">
+    <img [ngSrc]="product.image" [alt]="product.title" width="280" height="280" />
+  </figure>
+
+  <div class="card-body">
+    <h3 class="card-name">
+      <a [routerLink]="['/product', product.id]">{{ product.title }}</a>
+    </h3>
+
+    <div class="card-prices">
+      <span class="card-price-reg">S/ {{ product.price.toFixed(2) }}</span>
+    </div>
+
+    <div class="cta-row">
+      <button class="btn-cart" (click)="addToCart(product)">Agregar al carrito</button>
+      <button class="btn-fav" aria-label="Agregar a favoritos">
+        <i class="ri-poker-hearts-line"></i>
+      </button>
+    </div>
+  </div>
+</article>

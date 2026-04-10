@@ -3,7 +3,7 @@
 
     <!-- THUMBNAILS -->
     <div class="thumbnails">
-      <div class="thumb active">
+      <!-- <div class="thumb active">
         <img src="https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/071265X.jpg" alt="Vista 1"/>
       </div>
       <div class="thumb">
@@ -11,14 +11,14 @@
       </div>
       <div class="thumb">
         <img src="https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/071265-3X.jpg" alt="Vista 3"/>
-      </div>
+      </div> -->
     </div>
 
     <!-- GALLERY -->
     <div class="product-gallery">
       <img
-        src="https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/071265L.jpg"
-        alt="Pharamol Antigripal"
+        [src]="product.image"
+        [alt]="product.title"
       />
     </div>
 
@@ -67,7 +67,7 @@
         </ul>
       </div>
 
-      <div>
+      <!-- <div>
         <p class="presentacion-label">Presentación: <span style="color:var(--gray-500);font-weight:500;">Sobre</span></p>
       </div>
 
@@ -92,7 +92,7 @@
           </div>
           <div class="radio-circle"><div class="radio-dot"></div></div>
         </div>
-      </div>
+      </div> -->
 
       <div class="cta-row">
         <button class="btn-cart" (click)="addToCart(product)">Agregar al carrito</button>
@@ -102,6 +102,22 @@
       </div>
     </div>
   </section>
+
+
+
+  <!-- LO MAS BUSCADO -->
+<section class="section-most-popular">
+  <div class="section-header">
+    <h2 class="section-title">Lo más buscado</h2>
+  </div>
+  <div class="carousel-wrapper">
+    <div class="products-grid">
+      @for (product of mostPopularProducts$ | async; track product.id) {
+        <app-product-card [product]="product" />
+      }
+    </div>
+  </div>
+</section>
 }
 @else {
   <p>Cargando...</p>

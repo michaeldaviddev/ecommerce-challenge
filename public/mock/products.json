@@ -4,20 +4,39 @@
     "sku": "071265",
     "title": "Pharamol Antigripal 500 mg + 5 mg + 2 mg Tableta Recubierta",
     "description": "Descripción del producto 1",
-    "price": 1.90
+    "price": 1.90,
+    "image": "https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/071265L.jpg"
   },
   {
     "id": 2,
     "sku": "037437",
     "title": "Don Grippa 500mg+5mg+2mg Tableta Recubierta",
     "description": "Descripción del producto 2",
-    "price": 9.90
+    "price": 9.90,
+    "image": "https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/037437L.jpg"
   },
   {
     "id": 3,
     "sku": "324071",
     "title": "Vick Vaporub Ungüento tópico",
     "description": "Descripción del producto 3",
-    "price": 3.00
+    "price": 3.00,
+    "image": "https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/324071L.jpg"
+  },
+  {
+    "id": 4,
+    "sku": "932007",
+    "title": "Abrilar EA 575 Jarabe",
+    "description": "Descripción del producto 3",
+    "price": 19.30,
+    "image": "https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/932007L.jpg"
+  },
+  {
+    "id": 5,
+    "sku": "424749",
+    "title": "Isla Mint Pastilla - Caja 50 UN",
+    "description": "Descripción del producto 3",
+    "price": 23.00,
+    "image": "https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/424749L.jpg"
   }
 ]
