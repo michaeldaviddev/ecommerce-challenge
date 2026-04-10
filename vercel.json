@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "name": "ecommerce-challenge",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api/index"
+    }
+  ],
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "dist/ecommerce-challenge/**"
+    }
+  }
+}
