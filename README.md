@@ -74,7 +74,7 @@ Esta solución incorpora varias mejoras para rendimiento:
   - tree shaking
   - hashing de archivos
 - Rutas cargadas de forma perezosa con `loadComponent(...)` en `src/app/app.routes.ts`, lo que reduce el tamaño inicial del bundle.
-- SSR con `@angular/ssr` y `Express` para mejorar el tiempo de primera pintura y SEO.
+- SSR con `@angular/ssr` y `Express` para mejorar el FCP y SEO.
 - Uso de componentes standalone y reactividad nativa de Angular para mantener la UI eficiente.
 - Uso de NgOptimizedImage
 - Separación de responsabilidades entre servicios y componentes para evitar lógica duplicada y mejorar la mantenibilidad.
@@ -93,3 +93,31 @@ La arquitectura se diseñó pensando en crecimiento y extensibilidad:
 - El servicio `ProductService` consume `mock/products.json` para simular una API de productos.
 - `CartService` guarda el carrito en `localStorage`, lo que permite persistencia básica entre recargas.
 - El proyecto usa `Vitest` para pruebas unitarias mediante el comando `npm test`.
+
+## Preguntas técnicas
+
+### 1. ¿Qué decisiones tomaste para mejorar la performance en esta página?
+- Implementé SSR para entregar HTML pre-renderizado desde el servidor. Esto reduce significativamente el Time to First Paint (FCP) y mejora el SEO, ya que el contenido es visible antes de que Angular se hidrate en el cliente.
+- Dividí la aplicación en componentes cargados de forma diferida usando `loadComponent(...)` lo que permitió reducir el tamaño del bundle inicial.
+- Utilicé `NgOptimizedImage` para aplicar lazy loading automático, esto ayuda a mejorar métricas como el Largest Contentful Paint (LCP).
+
+### 2. ¿Cómo estructurarías esta solución para soportar múltiples marcas con diferentes estilos?
+- Usaría un sistema de temas CSS/SCSS basado en variables.
+- Usaría un servicio con los datos de marca.
+- Mantendría componentes visuales reutilizables y parametrizables para que sólo el estilo cambie, no la lógica.
+
+### 3. Si esta página presenta problemas de LCP en producción, ¿cómo lo abordaría?
+- Identificaría las causas usando Lighthouse o Web Vitals.
+- Optimizaría las imágenes y recursos grandes, preferiblemente con `NgOptimizedImage` o carga diferida (`loading="lazy"`).
+- Revisaría las etiquetas link.
+- Revisaría el tiempo de respuesta del servidor.
+
+### 4. ¿Cómo evitarías que eventos de Analytics se disparen múltiples veces en una SPA?
+- Centralizaría la lógica de analytics en un servicio.
+- Evitaría eventos frecuentes como click repetitivos
+
+### 5. ¿Qué consideraciones SEO tendrías en cuenta para esta página en un entorno real?
+- Mantener SSR activo para entregar HTML indexable y mejorar la visibilidad en buscadores.
+- Usar rutas limpias y semánticas, por ejemplo `/products`, `/product/:id`, `/cart`.
+- Añadir metadatos dinámicos y etiquetas `title`/`description` relevantes por página.
+- Configurar un sitemap y `robots.txt` apropiados en el despliegue final.
