@@ -285,15 +285,6 @@
   font-size: 1.2rem;
   color: var(--gray-900);
 }
-.section-link {
-  color: var(--green-primary);
-  font-weight: 700;
-  font-size: 0.85rem;
-  font-family: var(--font-display);
-}
-.section-link:hover {
-  text-decoration: underline;
-}
 .carousel-wrapper {
   max-width: 1280px;
   margin: 0 auto;
@@ -301,31 +292,6 @@
   display: flex;
   gap: 16px;
   align-items: center;
-}
-.carousel-btn {
-  width: 36px;
-  height: 36px;
-  border: 1.5px solid var(--gray-200);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: white;
-  flex-shrink: 0;
-  transition:
-    border-color 0.2s,
-    background 0.2s;
-}
-.carousel-btn:hover {
-  border-color: var(--green-primary);
-  background: var(--green-light);
-}
-.carousel-btn svg {
-  width: 16px;
-  height: 16px;
-  stroke: var(--gray-500);
-  fill: none;
-  stroke-width: 2;
 }
 .products-grid {
   display: grid;

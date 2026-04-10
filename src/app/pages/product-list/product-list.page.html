@@ -1,0 +1,9 @@
+<section class="product-list">
+  <div class="carousel-wrapper">
+    <div class="products-grid">
+      @for (product of products$ | async; track product.id) {
+        <app-product-card [product]="product" />
+      }
+    </div>
+  </div>
+</section>

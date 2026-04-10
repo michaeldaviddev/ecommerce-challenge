@@ -1,0 +1,45 @@
+<div class="cart-wrapper">
+
+  <div class="cart-header">
+    <span class="cart-title">
+      Mi carrito
+      <span class="cart-count">{{ totalItems }}</span>
+    </span>
+  </div>
+
+  @if (cart.length) {
+    <div class="cart-items">
+      @for (item of cart; track item.id) {
+        <div class="cart-item">
+          <div class="item-img">
+            <img [src]="item.image || 'assets/placeholder.png'" [alt]="item.name" />
+          </div>
+          <div class="item-body">
+            <p class="item-name">{{ item.title }}</p>
+            <div class="item-footer">
+              <span class="item-price">S/ {{ (item.price * item.quantity).toFixed(2) }}</span>
+              <div class="qty-ctrl">
+                <span class="qty-val">{{ item.quantity }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+  </div>
+  }
+  @else {
+    <div class="empty-state">Tu carrito está vacío</div>
+  }
+
+  @if (cart.length) {
+    <div class="cart-summary">
+      <div class="summary-row total">
+        <span>Total</span>
+        <span>S/ {{ total.toFixed(2) }}</span>
+      </div>
+    </div>
+    <div class="cart-footer">
+    <button class="btn-checkout">Ir al pago</button>
+  </div>
+  }
+</div>
