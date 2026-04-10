@@ -5,8 +5,8 @@ Desafío técnico desarrollado con Angular 21 y soporte SSR.
 ## Requisitos
 
 - Node.js 18+ (recomendado)
-- NPM 11+ (el proyecto define `npm@11.9.0` como package manager)
-- Angular CLI no es obligatorio globalmente, pero puedes usar `npm run` para ejecutar los comandos disponibles.
+- NPM 11+ (recomendado)
+- Angular CLI
 
 ## Instalación
 
